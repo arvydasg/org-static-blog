@@ -1,0 +1,7 @@
+#+title:      first note
+#+date:       [2023-12-13 Wed 16:28]
+#+filetags:   :emacs:philosophy:
+#+identifier: 20231213T162830
+#+STARTUP:    overview
+
+Hello this is a first note containing two tags.

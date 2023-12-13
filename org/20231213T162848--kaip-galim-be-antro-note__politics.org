@@ -1,0 +1,7 @@
+#+title:      kaip galim be antro note
+#+date:       [2023-12-13 Wed 16:28]
+#+filetags:   :politics:
+#+identifier: 20231213T162848
+#+STARTUP:    overview
+
+Hello this is a second note, kaip galim be jo zinai.
