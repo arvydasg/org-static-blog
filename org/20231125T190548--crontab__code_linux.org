@@ -1,0 +1,8 @@
+#+title:      crontab
+#+date:       [2023-11-25 Sat 19:05]
+#+filetags:   :code:linux:
+#+identifier: 20231125T190548
+
+- To view your own user's crontab: ~crontab -l~
+- To edit your own user's crontab: ~crontab -e~
+- To remove your own user's crontab: ~crontab -r~

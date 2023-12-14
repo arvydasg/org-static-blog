@@ -1,0 +1,69 @@
+#+title:      angular installation
+#+date:       [2023-11-25 Sat 18:46]
+#+filetags:   :angular:code:
+#+identifier: 20231125T184606
+
+* Installation of Angular
+
+- Make sure you have nvm installed. To install -
+
+#+begin_src bash
+  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
+  source ~/.bashrc
+  nvm -v.
+#+end_src
+
+Over it install node latest version by:
+
+#+begin_src bash
+  nvm install --lts
+  nvm use --lts
+  node -v
+#+end_src
+
+make sure npm is installed by
+
+#+begin_src bash
+  npm -v
+#+end_src
+
+install angular by:
+
+#+begin_src bash
+  npm install -g @angular/cli
+  ng version
+#+end_src
+
+install project dependencies by:
+
+#+begin_src bash
+  npm install
+#+end_src
+
+Start angular service while in crud folder with ng serve command (or
+NODE_OPTIONS="--max_old_space_size=512" ng serve) if you are low on
+system resources. go to http://localhost:4200/ and you should see a
+list of movies.
+
+typescript version - ~tsc -v~
+
+- Development server
+
+Run ~ng serve~ for a dev server. Navigate to `http://localhost:4200/`.
+The application will automatically reload if you change any of the
+source files.
+
+* start ng serve
+
+you might close the terminal and open it again and try to use ng
+serve - it might say node is not found, install it.
+
+well that's because NVM somehow forgot which node it was using.
+
+so we need to tell NVM once again to use node lt's:
+
+#+begin_src bash
+  nvm use --lts
+#+end_src
+
+after this do node -v and npm -v - it should work once again.

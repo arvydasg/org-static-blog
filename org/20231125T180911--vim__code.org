@@ -1,0 +1,209 @@
+#+title:      vim
+#+date:       [2023-11-25 Sat 18:09]
+#+filetags:   :code:
+#+identifier: 20231125T180911--vim__code.org
+
+* Vim
+** Vim bindings in evil
+
+Well, I'm not sure how relevant my experience is to your case.
+Originally i used Emacs in favor of Vim. Evil just makes Emacs a
+straight up better Vim and the emulation is as good as flawless.
+
+Vscode happens to also have a pretty decent vim emulation.
+
+It's not as configurable and in the beginning it feels incredibly
+restrictive to not be able to customise everything and script things
+on the fly.
+
+But after a while you realise that it's as much a blessing as it is a
+curse. Because of this it relies on sane defaults instead, and
+suddenly you'll find yourself messing with your config once a month
+rather than twice a day.
+
+Just added something new to your stack or need language support for a
+new language? Just search for it in the built-in extension manager,
+press install and you're *done*. Back to work. No manual needed, no time
+wasted scrolling through their issue tracker to figure out why the
+hell you can't get LSP support or completions to work. It Just Works™.
+
+That said I still miss a lot of things, and it regularly gets on my
+nerves. But it definitely makes me more productive.
+** [2022-12-03 Sat] I tried!!
+isirasiau evil emacse
+org mode neveikia tab vscode.. tingejau ieskotis. + blet nebus ten
+agenda, tai koks tolkas daryti kazka su datomis.. zodziu.. aciu, ne.
+kaip projektu ieskoti vscode
+
+galiausiai pagalvojau... ble, jeigu man dabar gerai, kam man
+isradineti dvirati ir meginti priprasti prie naujos sistemos be AISKIU
+benfits. Dabar supratau, jog tai darau vien del to, kad kazkas pasake,
+jog evil yra nice. Ne aciu.
+
+Kai tikrai pamatysiu, jog man reikia, tuo met ir ismoksiu visus
+dalykys. O, geras, isjungiau company mode ir org major mode - nebemeta
+tu damn suggestions. Gal ir gerai.
+** Vim bindings in evil
+
+Well, I'm not sure how relevant my experience is to your case.
+Originally i used Emacs in favor of Vim. Evil just makes Emacs a
+straight up better Vim and the emulation is as good as flawless.
+
+Vscode happens to also have a pretty decent vim emulation.
+
+It's not as configurable and in the beginning it feels incredibly
+restrictive to not be able to customise everything and script things
+on the fly.
+
+But after a while you realise that it's as much a blessing as it is a
+curse. Because of this it relies on sane defaults instead, and
+suddenly you'll find yourself messing with your config once a month
+rather than twice a day.
+
+Just added something new to your stack or need language support for a
+new language? Just search for it in the built-in extension manager,
+press install and you're *done*. Back to work. No manual needed, no time
+wasted scrolling through their issue tracker to figure out why the
+hell you can't get LSP support or completions to work. It Just Works™.
+
+That said I still miss a lot of things, and it regularly gets on my
+nerves. But it definitely makes me more productive.
+** [[https://github.com/noctuid/evil-guide][Emacs/Evil for vim users didelis gidas apie evil]]
+** [[https://evil.readthedocs.io/en/latest/overview.html][evil mode documentation]]
+** old .vimrcp
+#+begin_src bash
+" -----------------------------------------------------------------------------
+" Plugins
+" -----------------------------------------------------------------------------
+
+call plug#begin('~/.vim/plugged')
+Plug 'scrooloose/nerdcommenter' " comment text out
+Plug 'tpope/vim-surround' " surround text with ' { ( or edit html tags
+Plug 'itchyny/lightline.vim' " indicating modes and more info bottom bar
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim' " fuzzy file finder
+Plug 'easymotion/vim-easymotion' "jump to word
+Plug 'morhetz/gruvbox' " theme
+Plug 'mattn/emmet-vim' "adding html tags
+Plug 'vim-scripts/AutoComplPop' " super duper text autocompletion
+Plug 'machakann/vim-highlightedyank' "highlight yanked text
+call plug#end()
+
+" -----------------------------------------------------------------------------
+" Stuff
+" -----------------------------------------------------------------------------
+
+syntax on
+set number relativenumber
+set laststatus=2
+set colorcolumn=80
+set cursorline
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+set expandtab
+set smarttab
+set nowrap
+set textwidth=0
+set mouse=n
+set noerrorbells
+set autoindent
+set copyindent
+set virtualedit=all
+set ignorecase
+set incsearch
+set smartcase
+set hidden "buffers
+set complete+=kspell
+set completeopt=menuone,longest " :h completeopt
+set shortmess+=c " don't pass messages to |ins-completion-menu|
+set t_Co=256
+set background=dark
+colorscheme gruvbox
+" Ignore rules for file editing
+set wildmenu  "shows multiple matches on one line
+set wildchar=<tab>
+set wildmode=list:full
+set wildignore+=*.swp,*.bak,*.pyc,*.pyo,*.so,*~,*.zip,*.gz,*.tar
+set wildignore+=virtual/,.virtualenv/,upload/,uploads/,node_modules/
+" Autosave
+set updatetime=1000
+autocmd CursorHold,CursorHoldI * silent update
+
+" -----------------------------------------------------------------------------
+" Shortcuts
+" -----------------------------------------------------------------------------
+
+" nnoremap <F2> :e $MYVIMRC<CR>
+" nnoremap <F3> :source $MYVIMRC<CR>
+
+let mapleader=" "
+
+nnoremap B ^
+nnoremap E $
+
+inoremap kj  <ESC>
+
+:command WQ wq
+:command Wq wq
+:command W w
+:command Q q
+
+let g:user_emmet_mode='n'      "only enable normal mode functions
+let g:user_emmet_leader_key=','
+
+let g:NERDSpaceDelims=1
+let g:NERDDefaultAlign = 'left'
+
+let g:highlightedyank_highlight_duration = 500
+let g:highlightedyank_highlight_duration = -1
+
+" Press * to search for the term under the cursor or a visual selection and
+" then press a key below to replace all instances of it in the current file.
+nnoremap <Leader>r :%s///g<Left><Left>
+nnoremap <Leader>rc :%s///gc<Left><Left><Left>
+
+" Automatically fix the last misspelled word and jump back to where you were.
+nnoremap <leader>sp :normal! mz[s1z=`z<CR>
+nmap <leader>t :enew<cr>
+map <leader>pv :Ex<CR>
+map <leader>m :Marks<CR>
+nnoremap <leader>x :bd<CR>
+map <leader>f :Files<CR>
+nnoremap <Leader>+ :vertical resize +10<CR>
+nnoremap <Leader>- :vertical resize -10<CR>
+nnoremap <silent> <Leader>l :Lines<CR>
+nnoremap <silent> <Leader><Enter> :Buffers<CR>
+inoremap <expr> <c-j> ((pumvisible())?("\<C-n>"):("j"))
+inoremap <expr> <c-k> ((pumvisible())?("\<C-p>"):("k"))
+let g:EasyMotion_do_mapping = 0 " Disable default mappings
+map <Space><Space> <Plug>(easymotion-bd-w)
+
+" -----------------------------------------------------------------------------
+" Backups and swap
+" -----------------------------------------------------------------------------
+
+silent execute '!mkdir -p /tmp/.vim-backup'
+set backupdir=/tmp/.vim-backup
+set noswapfile
+autocmd BufWritePre * let &bex = '-' . strftime("%Y-%m-%d_%H:%M")
+" -----------------------------------------------------------------------------
+" Spell Checker toggle
+" -----------------------------------------------------------------------------
+
+
+" set spelllang=en_usdfdsfsdfdsfsdfsf
+" function! ToggleSpellCheck()
+"   set spell!
+"   if &spell
+"     echo "Spellcheck ON"
+"   else
+"     echo "Spellcheck OFF"
+"   endif
+" endfunction
+
+" nnoremap <silent> <Leader>sp :call ToggleSpellCheck()<CR>
+hi clear SpellBad
+hi SpellBad cterm=underline,bold
+hi SpellBad ctermfg=Red
+#+end_src

@@ -4,7 +4,7 @@
 <title><![CDATA[arvydasg.github.io]]></title>
 <description><![CDATA[arvydasg.github.io]]></description>
 <link>https://arvydasg.github.io/org-static-blog/html</link>
-<lastBuildDate>Wed, 13 Dec 2023 16:40:56 +0000</lastBuildDate>
+<lastBuildDate>Thu, 14 Dec 2023 03:38:32 +0000</lastBuildDate>
 <item>
   <title><![CDATA[kaip galim be antro note]]></title>
   <description><![CDATA[
@@ -15,7 +15,7 @@ Hello this is a second note, kaip galim be jo zinai.
   <category><![CDATA[politics]]></category>
   <link>https://arvydasg.github.io/org-static-blog/html/20231213T162848--kaip-galim-be-antro-note__politics.html</link>
   <guid>https://arvydasg.github.io/org-static-blog/html/20231213T162848--kaip-galim-be-antro-note__politics.html</guid>
-  <pubDate>Wed, 13 Dec 2023 16:40:56 +0000</pubDate>
+  <pubDate>Thu, 14 Dec 2023 03:38:32 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[first note]]></title>
@@ -28,7 +28,671 @@ Hello this is a first note containing two tags.
   <category><![CDATA[philosophy]]></category>
   <link>https://arvydasg.github.io/org-static-blog/html/20231213T162830--first-note__emacs_philosophy.html</link>
   <guid>https://arvydasg.github.io/org-static-blog/html/20231213T162830--first-note__emacs_philosophy.html</guid>
-  <pubDate>Wed, 13 Dec 2023 16:40:56 +0000</pubDate>
+  <pubDate>Thu, 14 Dec 2023 03:38:32 +0000</pubDate>
+</item>
+<item>
+  <title><![CDATA[crontab]]></title>
+  <description><![CDATA[
+<ul class="org-ul">
+<li>To view your own user's crontab: <code>crontab -l</code></li>
+<li>To edit your own user's crontab: <code>crontab -e</code></li>
+<li>To remove your own user's crontab: <code>crontab -r</code></li>
+</ul>
+<div class="taglist"><a href="https://arvydasg.github.io/org-static-blog/html/tags.html">Tags</a>: <a href="https://arvydasg.github.io/org-static-blog/html/tag-code.html">code</a> <a href="https://arvydasg.github.io/org-static-blog/html/tag-linux.html">linux</a> </div>]]></description>
+  <category><![CDATA[code]]></category>
+  <category><![CDATA[linux]]></category>
+  <link>https://arvydasg.github.io/org-static-blog/html/20231125T190548--crontab__code_linux.html</link>
+  <guid>https://arvydasg.github.io/org-static-blog/html/20231125T190548--crontab__code_linux.html</guid>
+  <pubDate>Thu, 14 Dec 2023 03:38:32 +0000</pubDate>
+</item>
+<item>
+  <title><![CDATA[angular installation]]></title>
+  <description><![CDATA[
+<nav id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org4ac98c5">1. Installation of Angular</a></li>
+<li><a href="#org1f0eec3">2. start ng serve</a></li>
+</ul>
+</div>
+</nav>
+
+<div id="outline-container-org4ac98c5" class="outline-2">
+<h2 id="org4ac98c5"><span class="section-number-2">1.</span> Installation of Angular</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>Make sure you have nvm installed. To install -</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-bash">curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
+source ~/.bashrc
+nvm -v.
+</pre>
+</div>
+
+<p>
+Over it install node latest version by:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">nvm install --lts
+nvm use --lts
+node -v
+</pre>
+</div>
+
+<p>
+make sure npm is installed by
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">npm -v
+</pre>
+</div>
+
+<p>
+install angular by:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">npm install -g @angular/cli
+ng version
+</pre>
+</div>
+
+<p>
+install project dependencies by:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">npm install
+</pre>
+</div>
+
+<p>
+Start angular service while in crud folder with ng serve command (or
+NODE<sub>OPTIONS</sub>="&#x2013;max<sub>old</sub><sub>space</sub><sub>size</sub>=512" ng serve) if you are low on
+system resources. go to <a href="http://localhost:4200/">http://localhost:4200/</a> and you should see a
+list of movies.
+</p>
+
+<p>
+typescript version - <code>tsc -v</code>
+</p>
+
+<ul class="org-ul">
+<li>Development server</li>
+</ul>
+
+<p>
+Run <code>ng serve</code> for a dev server. Navigate to `<a href="http://localhost:4200/">http://localhost:4200/</a>`.
+The application will automatically reload if you change any of the
+source files.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1f0eec3" class="outline-2">
+<h2 id="org1f0eec3"><span class="section-number-2">2.</span> start ng serve</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+you might close the terminal and open it again and try to use ng
+serve - it might say node is not found, install it.
+</p>
+
+<p>
+well that's because NVM somehow forgot which node it was using.
+</p>
+
+<p>
+so we need to tell NVM once again to use node lt's:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">nvm use --lts
+</pre>
+</div>
+
+<p>
+after this do node -v and npm -v - it should work once again.
+</p>
+</div>
+</div>
+<div class="taglist"><a href="https://arvydasg.github.io/org-static-blog/html/tags.html">Tags</a>: <a href="https://arvydasg.github.io/org-static-blog/html/tag-angular.html">angular</a> <a href="https://arvydasg.github.io/org-static-blog/html/tag-code.html">code</a> </div>]]></description>
+  <category><![CDATA[angular]]></category>
+  <category><![CDATA[code]]></category>
+  <link>https://arvydasg.github.io/org-static-blog/html/20231125T184606--angular-installation__angular_code.html</link>
+  <guid>https://arvydasg.github.io/org-static-blog/html/20231125T184606--angular-installation__angular_code.html</guid>
+  <pubDate>Thu, 14 Dec 2023 03:38:32 +0000</pubDate>
+</item>
+<item>
+  <title><![CDATA[vscode]]></title>
+  <description><![CDATA[
+<nav id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org94986ea">1. vscode</a>
+<ul>
+<li><a href="#org13cd6f5">1.1. vscode vs vim vs emacs lex fridman inspired</a></li>
+<li><a href="#org54b31ac">1.2. try out evil mode&#x2026;</a></li>
+<li><a href="#orgcbb9136">1.3. Macro for opening same file in vscode</a></li>
+<li><a href="#org43513c9">1.4. vscode shortcuts</a></li>
+<li><a href="#org4c1c20b">1.5. vscode plugins</a></li>
+<li><a href="#org5d673d3">1.6. VScode github real life examples</a></li>
+<li><a href="#org7b0e79a">1.7. https://desktop.github.com/</a></li>
+<li><a href="#org88cfd47">1.8. why vscode</a></li>
+<li><a href="#org4530711">1.9. Trying out other editors</a></li>
+<li><a href="#orgdd47b36">1.10. Reason</a></li>
+<li><a href="#org853640d">1.11. Andrei karpathy emacs lex did it convince him</a></li>
+<li><a href="#org0aecee6">1.12. automatic formatting with prettier</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+
+<div id="outline-container-org94986ea" class="outline-2">
+<h2 id="org94986ea"><span class="section-number-2">1.</span> vscode</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org13cd6f5" class="outline-3">
+<h3 id="org13cd6f5"><span class="section-number-3">1.1.</span> vscode vs vim vs emacs lex fridman inspired</h3>
+</div>
+<div id="outline-container-org54b31ac" class="outline-3">
+<h3 id="org54b31ac"><span class="section-number-3">1.2.</span> try out evil mode&#x2026;</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+it might be more practical to learn to use it instead of emacs
+bindings. when you are in shell or when you are in vscode with vim
+plugin or when talking to other programmers and when you are in a
+browser with vim extension for example.
+</p>
+</div>
+</div>
+<div id="outline-container-orgcbb9136" class="outline-3">
+<h3 id="orgcbb9136"><span class="section-number-3">1.3.</span> Macro for opening same file in vscode</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+I use Emacs for writing prose and general computing.
+</p>
+
+<p>
+But, with respect to programming, I now use both Emacs and VSCode <b>at the same time for the same files/projects</b>. (Although predominantly Emacs).
+</p>
+
+<p>
+I have been in Academia for years and I have always used Emacs for writing prose and programming (which has been a hobby on the side).
+</p>
+
+<p>
+Some months ago, I started working professionally on a Typescript/Angular project. And my co-workers, of course, use VSCode.
+</p>
+
+<p>
+Initially, I kept using Emacs. After a while, seeing the several ide features (go to definition, show documentation, etc.) that my colleagues were using, I decided to give VSCode a serious try and I used it to write Typescript/Angular for a whole month or so.
+</p>
+
+<p>
+After that, I tried to see whether I could get similar functionalities in Emacs. I tried both LSP Mode and Eglot. After some fighting, I had a quite usable LSP Mode with the ide features I wanted. Not as polished as VSCode, but totally usable. (Eglot was very nice, but I wanted to try ESLint and it looks like with Eglot, atm, you cannot have multiple LSP servers running for the same buffer.)
+</p>
+
+<p>
+Instead of going back to Emacs 100%, I decided to try a hybrid approach, which has been very pleasant so far. I use emacs most of the time, but when I feel that VSCode can offer some additional help I turn to it and then go back to Emacs. To make the process smooth I wrote some lines of elisp that make VSCode open the same file I am currently editing, at the same line and the same column. I have it bound to C-Caps (Actually it's C-Escape, because I have Escape remapped to Caps systemwise). When I want, then, I hit a key, VSCode appears, with the cursor placed exactly where Emacs cursor was, I do what I want to do, save if necessary, and switch back to Emacs. I usually keep VSCode already open in the same project, to allow things to be faster. Here is the elisp:
+</p>
+
+<p>
+```
+(defun gp/vscode-current-buffer-file-at-point ()
+  (interactive)
+  (start-process-shell-command "code"
+			       nil
+			       (concat "code &#x2013;goto "
+				       (buffer-file-name)
+				       ":"
+				       (number-to-string (1+ (current-line))) ;; +1 who knows why
+				       ":"
+				       (number-to-string (current-column)))))
+</p>
+
+<p>
+(define-key global-map (kbd "C-&lt;escape&gt;") 'gp/vscode-current-buffer-file-at-point)
+```
+</p>
+
+<p>
+&amp;#x200B;
+</p>
+
+<p>
+I would also like to able to open Emacs from VSCode, remaining in the same file, same line and column, too. Does anyone know how to do that?  I couldn't be bothered, so far&#x2026;
+</p>
+
+<p>
+Assuming that Emacs is better than VSCode at certain things (say, text-editing, keyboard-macros, extensibility on the fly) and VSCode is better than Emacs (at least, non-relevantly extended Emacs) at other things (say, code navigation/visualization and certain code-completions), using both at the same time is, I think, an approach that deserves some thought.
+</p>
+</div>
+</div>
+<div id="outline-container-org43513c9" class="outline-3">
+<h3 id="org43513c9"><span class="section-number-3">1.4.</span> vscode shortcuts</h3>
+<div class="outline-text-3" id="text-1-4">
+<ul class="org-ul">
+<li><code>c-k c-t</code> - choose theme</li>
+<li>syncing to other devices with github login in vs code&#x2026;</li>
+<li><code>c-shift-p</code> - ope command pallet</li>
+<li><code>f5</code> - run and debug ANY file</li>
+<li>jupyter notebooks in vscode? what is it for</li>
+<li><code>c-k c-o</code> - open a folder(opens up nautilus)</li>
+<li><code>shift+alt+click/up/down</code> multiple cursors</li>
+<li><code>ctrl+shift+k</code> - delete entire line</li>
+<li><code>f2</code> - rename variable</li>
+<li><code>c+shift+i</code> - format entire document</li>
+<li><code>c+k c+f</code> - format selection</li>
+<li><code>c+shift+[]</code> - fold unfold code</li>
+<li>type "if" or "try" and then select some sugeested completion snippet..</li>
+<li>emmet works just the same</li>
+<li><code>c-`</code> open terminal</li>
+<li><code>c-,</code> - open settings</li>
+<li><code>C-1, C-2, C-3</code> - different windows</li>
+<li>file-&gt;autosave - autosaves every little change</li>
+<li><code>c-n</code> - create new file</li>
+<li>live server/live preview - html/css editing on the fly</li>
+<li><code>c+shift+g</code> git interface</li>
+<li>run auto detected tasks(google when its useful)</li>
+<li><code>c+k c+s</code> customize shortcuts</li>
+<li>eslint extensions for smth many downloads</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4c1c20b" class="outline-3">
+<h3 id="org4c1c20b"><span class="section-number-3">1.5.</span> vscode plugins</h3>
+</div>
+<div id="outline-container-org5d673d3" class="outline-3">
+<h3 id="org5d673d3"><span class="section-number-3">1.6.</span> VScode github real life examples</h3>
+<div class="outline-text-3" id="text-1-6">
+<p>
+plugin name - IntelliCode API Usage Examples
+</p>
+</div>
+</div>
+<div id="outline-container-org7b0e79a" class="outline-3">
+<h3 id="org7b0e79a"><span class="section-number-3">1.7.</span> <a href="https://desktop.github.com/">https://desktop.github.com/</a></h3>
+</div>
+<div id="outline-container-org88cfd47" class="outline-3">
+<h3 id="org88cfd47"><span class="section-number-3">1.8.</span> why vscode</h3>
+<div class="outline-text-3" id="text-1-8">
+<p>
+ar mane stabdo emacs?
+</p>
+
+<p>
+pycharm is like an 18 wheeler truck and emacs is like your comfortable
+toyota - Guido
+</p>
+
+<p>
+Vscode is great. Its like a home i can go back to when I'm lost. But
+Emacs is an adventure - Guy on youtube
+</p>
+
+<p>
+<a href="https://www.youtube.com/watch?v=G5mtQhWNezQ&amp;ab_channel=LexClips">sita kalba lex su Guido</a>
+</p>
+
+<ul class="org-ul">
+<li>lex (vscode now 20k hours emacs)</li>
+<li>python create Guide Van Rossum (VSCODE now, 30 years emacs)</li>
+<li>George hotz(vscode + vim)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4530711" class="outline-3">
+<h3 id="org4530711"><span class="section-number-3">1.9.</span> Trying out other editors</h3>
+<div class="outline-text-3" id="text-1-9">
+<p>
+I think it really depends on what someone wants out of Emacs. The
+thread the other day on people who use both had a pretty strong choir
+of people who use Org-mode for note taking and VS Code for dev work,
+which makes perfect sense to me; Emacs guaranteed itself a place in my
+workflow with Org-mode.
+</p>
+
+<p>
+I think if you're satisfied with Emacs for now and you can concretely
+point to packages and functionality in Emacs that you would not know
+how to recreate in VS Code out of the gate, I would say there's not a
+ton of reason to switch to VS Code. I'm largely in the same boat, know
+the basics of some front-end web-dev, occasionally play around with CL
+and elisp, all non-professionally.
+</p>
+
+<p>
+Compatibility with a hypothetical future team will be dependent on
+that team, and at the same time many of the guides/tutorials for Emacs
+I've read encourage learning other editors and how they work in case
+you run into an employment situation that won't work with Emacs for
+whatever reason. Seems like good practice.
+</p>
+</div>
+</div>
+<div id="outline-container-orgdd47b36" class="outline-3">
+<h3 id="orgdd47b36"><span class="section-number-3">1.10.</span> Reason</h3>
+<div class="outline-text-3" id="text-1-10">
+<p>
+I think people overvalue this kind of thing. Vscode is going to be
+around for quite a while. If you think it would improve your life, you
+should use it. It might eventually go away in 15 years, but if it
+does, you can spend a weekend switching to something else. That’s
+hardly a reason to use a suboptimal tool until then. Of course, you
+may prefer Emacs, and that’s fine too. Just saying, I think it’s
+unwise to avoid an extremely healthy ecosystem and tool purely on the
+grounds that it might not exist forever.
+</p>
+</div>
+</div>
+<div id="outline-container-org853640d" class="outline-3">
+<h3 id="org853640d"><span class="section-number-3">1.11.</span> Andrei karpathy emacs lex did it convince him</h3>
+</div>
+<div id="outline-container-org0aecee6" class="outline-3">
+<h3 id="org0aecee6"><span class="section-number-3">1.12.</span> automatic formatting with prettier</h3>
+<div class="outline-text-3" id="text-1-12">
+<p>
+<a href="https://youtube.com/shorts/dDtueNAFELo?si=EDK6Ospk9N38QY_L">https://youtube.com/shorts/dDtueNAFELo?si=EDK6Ospk9N38QY_L</a>
+</p>
+</div>
+</div>
+</div>
+<div class="taglist"><a href="https://arvydasg.github.io/org-static-blog/html/tags.html">Tags</a>: <a href="https://arvydasg.github.io/org-static-blog/html/tag-code.html">code</a> </div>]]></description>
+  <category><![CDATA[code]]></category>
+  <link>https://arvydasg.github.io/org-static-blog/html/20231125T181008--vscode__code.html</link>
+  <guid>https://arvydasg.github.io/org-static-blog/html/20231125T181008--vscode__code.html</guid>
+  <pubDate>Thu, 14 Dec 2023 03:38:32 +0000</pubDate>
+</item>
+<item>
+  <title><![CDATA[vim]]></title>
+  <description><![CDATA[
+<nav id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgf9e924e">1. Vim</a>
+<ul>
+<li><a href="#org3d1c0be">1.1. Vim bindings in evil</a></li>
+<li><a href="#org8655544">1.2. <span class="timestamp-wrapper"><span class="timestamp">[2022-12-03 Sat] </span></span> I tried!!</a></li>
+<li><a href="#orgd7261ea">1.3. Vim bindings in evil</a></li>
+<li><a href="#org66ca713">1.4. Emacs/Evil for vim users didelis gidas apie evil</a></li>
+<li><a href="#orgf2529ca">1.5. evil mode documentation</a></li>
+<li><a href="#orgc0337b3">1.6. old .vimrcp</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+
+<div id="outline-container-orgf9e924e" class="outline-2">
+<h2 id="orgf9e924e"><span class="section-number-2">1.</span> Vim</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org3d1c0be" class="outline-3">
+<h3 id="org3d1c0be"><span class="section-number-3">1.1.</span> Vim bindings in evil</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+Well, I'm not sure how relevant my experience is to your case.
+Originally i used Emacs in favor of Vim. Evil just makes Emacs a
+straight up better Vim and the emulation is as good as flawless.
+</p>
+
+<p>
+Vscode happens to also have a pretty decent vim emulation.
+</p>
+
+<p>
+It's not as configurable and in the beginning it feels incredibly
+restrictive to not be able to customise everything and script things
+on the fly.
+</p>
+
+<p>
+But after a while you realise that it's as much a blessing as it is a
+curse. Because of this it relies on sane defaults instead, and
+suddenly you'll find yourself messing with your config once a month
+rather than twice a day.
+</p>
+
+<p>
+Just added something new to your stack or need language support for a
+new language? Just search for it in the built-in extension manager,
+press install and you're <b>done</b>. Back to work. No manual needed, no time
+wasted scrolling through their issue tracker to figure out why the
+hell you can't get LSP support or completions to work. It Just Works™.
+</p>
+
+<p>
+That said I still miss a lot of things, and it regularly gets on my
+nerves. But it definitely makes me more productive.
+</p>
+</div>
+</div>
+<div id="outline-container-org8655544" class="outline-3">
+<h3 id="org8655544"><span class="section-number-3">1.2.</span> <span class="timestamp-wrapper"><span class="timestamp">[2022-12-03 Sat] </span></span> I tried!!</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+isirasiau evil emacse
+org mode neveikia tab vscode.. tingejau ieskotis. + blet nebus ten
+agenda, tai koks tolkas daryti kazka su datomis.. zodziu.. aciu, ne.
+kaip projektu ieskoti vscode
+</p>
+
+<p>
+galiausiai pagalvojau&#x2026; ble, jeigu man dabar gerai, kam man
+isradineti dvirati ir meginti priprasti prie naujos sistemos be AISKIU
+benfits. Dabar supratau, jog tai darau vien del to, kad kazkas pasake,
+jog evil yra nice. Ne aciu.
+</p>
+
+<p>
+Kai tikrai pamatysiu, jog man reikia, tuo met ir ismoksiu visus
+dalykys. O, geras, isjungiau company mode ir org major mode - nebemeta
+tu damn suggestions. Gal ir gerai.
+</p>
+</div>
+</div>
+<div id="outline-container-orgd7261ea" class="outline-3">
+<h3 id="orgd7261ea"><span class="section-number-3">1.3.</span> Vim bindings in evil</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+Well, I'm not sure how relevant my experience is to your case.
+Originally i used Emacs in favor of Vim. Evil just makes Emacs a
+straight up better Vim and the emulation is as good as flawless.
+</p>
+
+<p>
+Vscode happens to also have a pretty decent vim emulation.
+</p>
+
+<p>
+It's not as configurable and in the beginning it feels incredibly
+restrictive to not be able to customise everything and script things
+on the fly.
+</p>
+
+<p>
+But after a while you realise that it's as much a blessing as it is a
+curse. Because of this it relies on sane defaults instead, and
+suddenly you'll find yourself messing with your config once a month
+rather than twice a day.
+</p>
+
+<p>
+Just added something new to your stack or need language support for a
+new language? Just search for it in the built-in extension manager,
+press install and you're <b>done</b>. Back to work. No manual needed, no time
+wasted scrolling through their issue tracker to figure out why the
+hell you can't get LSP support or completions to work. It Just Works™.
+</p>
+
+<p>
+That said I still miss a lot of things, and it regularly gets on my
+nerves. But it definitely makes me more productive.
+</p>
+</div>
+</div>
+<div id="outline-container-org66ca713" class="outline-3">
+<h3 id="org66ca713"><span class="section-number-3">1.4.</span> <a href="https://github.com/noctuid/evil-guide">Emacs/Evil for vim users didelis gidas apie evil</a></h3>
+</div>
+<div id="outline-container-orgf2529ca" class="outline-3">
+<h3 id="orgf2529ca"><span class="section-number-3">1.5.</span> <a href="https://evil.readthedocs.io/en/latest/overview.html">evil mode documentation</a></h3>
+</div>
+<div id="outline-container-orgc0337b3" class="outline-3">
+<h3 id="orgc0337b3"><span class="section-number-3">1.6.</span> old .vimrcp</h3>
+<div class="outline-text-3" id="text-1-6">
+<div class="org-src-container">
+<pre class="src src-bash">" -----------------------------------------------------------------------------
+" Plugins
+" -----------------------------------------------------------------------------
+
+call plug#begin('~/.vim/plugged')
+Plug 'scrooloose/nerdcommenter' " comment text out
+Plug 'tpope/vim-surround' " surround text with ' { ( or edit html tags
+Plug 'itchyny/lightline.vim' " indicating modes and more info bottom bar
+Plug 'junegunn/fzf', { 'do': { -&gt; fzf#install() } }
+Plug 'junegunn/fzf.vim' " fuzzy file finder
+Plug 'easymotion/vim-easymotion' "jump to word
+Plug 'morhetz/gruvbox' " theme
+Plug 'mattn/emmet-vim' "adding html tags
+Plug 'vim-scripts/AutoComplPop' " super duper text autocompletion
+Plug 'machakann/vim-highlightedyank' "highlight yanked text
+call plug#end()
+
+" -----------------------------------------------------------------------------
+" Stuff
+" -----------------------------------------------------------------------------
+
+syntax on
+set number relativenumber
+set laststatus=2
+set colorcolumn=80
+set cursorline
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+set expandtab
+set smarttab
+set nowrap
+set textwidth=0
+set mouse=n
+set noerrorbells
+set autoindent
+set copyindent
+set virtualedit=all
+set ignorecase
+set incsearch
+set smartcase
+set hidden "buffers
+set complete+=kspell
+set completeopt=menuone,longest " :h completeopt
+set shortmess+=c " don't pass messages to |ins-completion-menu|
+set t_Co=256
+set background=dark
+colorscheme gruvbox
+" Ignore rules for file editing
+set wildmenu  "shows multiple matches on one line
+set wildchar=&lt;tab&gt;
+set wildmode=list:full
+set wildignore+=*.swp,*.bak,*.pyc,*.pyo,*.so,*~,*.zip,*.gz,*.tar
+set wildignore+=virtual/,.virtualenv/,upload/,uploads/,node_modules/
+" Autosave
+set updatetime=1000
+autocmd CursorHold,CursorHoldI * silent update
+
+" -----------------------------------------------------------------------------
+" Shortcuts
+" -----------------------------------------------------------------------------
+
+" nnoremap &lt;F2&gt; :e $MYVIMRC&lt;CR&gt;
+" nnoremap &lt;F3&gt; :source $MYVIMRC&lt;CR&gt;
+
+let mapleader=" "
+
+nnoremap B ^
+nnoremap E $
+
+inoremap kj  &lt;ESC&gt;
+
+:command WQ wq
+:command Wq wq
+:command W w
+:command Q q
+
+let g:user_emmet_mode='n'      "only enable normal mode functions
+let g:user_emmet_leader_key=','
+
+let g:NERDSpaceDelims=1
+let g:NERDDefaultAlign = 'left'
+
+let g:highlightedyank_highlight_duration = 500
+let g:highlightedyank_highlight_duration = -1
+
+" Press * to search for the term under the cursor or a visual selection and
+" then press a key below to replace all instances of it in the current file.
+nnoremap &lt;Leader&gt;r :%s///g&lt;Left&gt;&lt;Left&gt;
+nnoremap &lt;Leader&gt;rc :%s///gc&lt;Left&gt;&lt;Left&gt;&lt;Left&gt;
+
+" Automatically fix the last misspelled word and jump back to where you were.
+nnoremap &lt;leader&gt;sp :normal! mz[s1z=`z&lt;CR&gt;
+nmap &lt;leader&gt;t :enew&lt;cr&gt;
+map &lt;leader&gt;pv :Ex&lt;CR&gt;
+map &lt;leader&gt;m :Marks&lt;CR&gt;
+nnoremap &lt;leader&gt;x :bd&lt;CR&gt;
+map &lt;leader&gt;f :Files&lt;CR&gt;
+nnoremap &lt;Leader&gt;+ :vertical resize +10&lt;CR&gt;
+nnoremap &lt;Leader&gt;- :vertical resize -10&lt;CR&gt;
+nnoremap &lt;silent&gt; &lt;Leader&gt;l :Lines&lt;CR&gt;
+nnoremap &lt;silent&gt; &lt;Leader&gt;&lt;Enter&gt; :Buffers&lt;CR&gt;
+inoremap &lt;expr&gt; &lt;c-j&gt; ((pumvisible())?("\&lt;C-n&gt;"):("j"))
+inoremap &lt;expr&gt; &lt;c-k&gt; ((pumvisible())?("\&lt;C-p&gt;"):("k"))
+let g:EasyMotion_do_mapping = 0 " Disable default mappings
+map &lt;Space&gt;&lt;Space&gt; &lt;Plug&gt;(easymotion-bd-w)
+
+" -----------------------------------------------------------------------------
+" Backups and swap
+" -----------------------------------------------------------------------------
+
+silent execute '!mkdir -p /tmp/.vim-backup'
+set backupdir=/tmp/.vim-backup
+set noswapfile
+autocmd BufWritePre * let &amp;bex = '-' . strftime("%Y-%m-%d_%H:%M")
+" -----------------------------------------------------------------------------
+" Spell Checker toggle
+" -----------------------------------------------------------------------------
+
+
+" set spelllang=en_usdfdsfsdfdsfsdfsf
+" function! ToggleSpellCheck()
+"   set spell!
+"   if &amp;spell
+"     echo "Spellcheck ON"
+"   else
+"     echo "Spellcheck OFF"
+"   endif
+" endfunction
+
+" nnoremap &lt;silent&gt; &lt;Leader&gt;sp :call ToggleSpellCheck()&lt;CR&gt;
+hi clear SpellBad
+hi SpellBad cterm=underline,bold
+hi SpellBad ctermfg=Red
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="taglist"><a href="https://arvydasg.github.io/org-static-blog/html/tags.html">Tags</a>: <a href="https://arvydasg.github.io/org-static-blog/html/tag-code.html">code</a> </div>]]></description>
+  <category><![CDATA[code]]></category>
+  <link>https://arvydasg.github.io/org-static-blog/html/20231125T180911--vim__code.html</link>
+  <guid>https://arvydasg.github.io/org-static-blog/html/20231125T180911--vim__code.html</guid>
+  <pubDate>Thu, 14 Dec 2023 03:38:32 +0000</pubDate>
 </item>
 </channel>
 </rss>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="alternate"
+      type="application/rss+xml"
+      href="https://arvydasg.github.io/org-static-blog/html/rss.xml"
+      title="RSS feed for https://arvydasg.github.io/org-static-blog/html">
+<title>vscode</title>
+</head>
+<body>
+<div id="preamble" class="status"></div>
+<div id="content">
+<div class="post-date">14 Dec 2023</div><h1 class="post-title"><a href="https://arvydasg.github.io/org-static-blog/html/20231125T181008--vscode__code.html">vscode</a></h1>
+<nav id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org94986ea">1. vscode</a>
+<ul>
+<li><a href="#org13cd6f5">1.1. vscode vs vim vs emacs lex fridman inspired</a></li>
+<li><a href="#org54b31ac">1.2. try out evil mode&#x2026;</a></li>
+<li><a href="#orgcbb9136">1.3. Macro for opening same file in vscode</a></li>
+<li><a href="#org43513c9">1.4. vscode shortcuts</a></li>
+<li><a href="#org4c1c20b">1.5. vscode plugins</a></li>
+<li><a href="#org5d673d3">1.6. VScode github real life examples</a></li>
+<li><a href="#org7b0e79a">1.7. https://desktop.github.com/</a></li>
+<li><a href="#org88cfd47">1.8. why vscode</a></li>
+<li><a href="#org4530711">1.9. Trying out other editors</a></li>
+<li><a href="#orgdd47b36">1.10. Reason</a></li>
+<li><a href="#org853640d">1.11. Andrei karpathy emacs lex did it convince him</a></li>
+<li><a href="#org0aecee6">1.12. automatic formatting with prettier</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+
+<div id="outline-container-org94986ea" class="outline-2">
+<h2 id="org94986ea"><span class="section-number-2">1.</span> vscode</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org13cd6f5" class="outline-3">
+<h3 id="org13cd6f5"><span class="section-number-3">1.1.</span> vscode vs vim vs emacs lex fridman inspired</h3>
+</div>
+<div id="outline-container-org54b31ac" class="outline-3">
+<h3 id="org54b31ac"><span class="section-number-3">1.2.</span> try out evil mode&#x2026;</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+it might be more practical to learn to use it instead of emacs
+bindings. when you are in shell or when you are in vscode with vim
+plugin or when talking to other programmers and when you are in a
+browser with vim extension for example.
+</p>
+</div>
+</div>
+<div id="outline-container-orgcbb9136" class="outline-3">
+<h3 id="orgcbb9136"><span class="section-number-3">1.3.</span> Macro for opening same file in vscode</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+I use Emacs for writing prose and general computing.
+</p>
+
+<p>
+But, with respect to programming, I now use both Emacs and VSCode <b>at the same time for the same files/projects</b>. (Although predominantly Emacs).
+</p>
+
+<p>
+I have been in Academia for years and I have always used Emacs for writing prose and programming (which has been a hobby on the side).
+</p>
+
+<p>
+Some months ago, I started working professionally on a Typescript/Angular project. And my co-workers, of course, use VSCode.
+</p>
+
+<p>
+Initially, I kept using Emacs. After a while, seeing the several ide features (go to definition, show documentation, etc.) that my colleagues were using, I decided to give VSCode a serious try and I used it to write Typescript/Angular for a whole month or so.
+</p>
+
+<p>
+After that, I tried to see whether I could get similar functionalities in Emacs. I tried both LSP Mode and Eglot. After some fighting, I had a quite usable LSP Mode with the ide features I wanted. Not as polished as VSCode, but totally usable. (Eglot was very nice, but I wanted to try ESLint and it looks like with Eglot, atm, you cannot have multiple LSP servers running for the same buffer.)
+</p>
+
+<p>
+Instead of going back to Emacs 100%, I decided to try a hybrid approach, which has been very pleasant so far. I use emacs most of the time, but when I feel that VSCode can offer some additional help I turn to it and then go back to Emacs. To make the process smooth I wrote some lines of elisp that make VSCode open the same file I am currently editing, at the same line and the same column. I have it bound to C-Caps (Actually it's C-Escape, because I have Escape remapped to Caps systemwise). When I want, then, I hit a key, VSCode appears, with the cursor placed exactly where Emacs cursor was, I do what I want to do, save if necessary, and switch back to Emacs. I usually keep VSCode already open in the same project, to allow things to be faster. Here is the elisp:
+</p>
+
+<p>
+```
+(defun gp/vscode-current-buffer-file-at-point ()
+  (interactive)
+  (start-process-shell-command "code"
+			       nil
+			       (concat "code &#x2013;goto "
+				       (buffer-file-name)
+				       ":"
+				       (number-to-string (1+ (current-line))) ;; +1 who knows why
+				       ":"
+				       (number-to-string (current-column)))))
+</p>
+
+<p>
+(define-key global-map (kbd "C-&lt;escape&gt;") 'gp/vscode-current-buffer-file-at-point)
+```
+</p>
+
+<p>
+&amp;#x200B;
+</p>
+
+<p>
+I would also like to able to open Emacs from VSCode, remaining in the same file, same line and column, too. Does anyone know how to do that?  I couldn't be bothered, so far&#x2026;
+</p>
+
+<p>
+Assuming that Emacs is better than VSCode at certain things (say, text-editing, keyboard-macros, extensibility on the fly) and VSCode is better than Emacs (at least, non-relevantly extended Emacs) at other things (say, code navigation/visualization and certain code-completions), using both at the same time is, I think, an approach that deserves some thought.
+</p>
+</div>
+</div>
+<div id="outline-container-org43513c9" class="outline-3">
+<h3 id="org43513c9"><span class="section-number-3">1.4.</span> vscode shortcuts</h3>
+<div class="outline-text-3" id="text-1-4">
+<ul class="org-ul">
+<li><code>c-k c-t</code> - choose theme</li>
+<li>syncing to other devices with github login in vs code&#x2026;</li>
+<li><code>c-shift-p</code> - ope command pallet</li>
+<li><code>f5</code> - run and debug ANY file</li>
+<li>jupyter notebooks in vscode? what is it for</li>
+<li><code>c-k c-o</code> - open a folder(opens up nautilus)</li>
+<li><code>shift+alt+click/up/down</code> multiple cursors</li>
+<li><code>ctrl+shift+k</code> - delete entire line</li>
+<li><code>f2</code> - rename variable</li>
+<li><code>c+shift+i</code> - format entire document</li>
+<li><code>c+k c+f</code> - format selection</li>
+<li><code>c+shift+[]</code> - fold unfold code</li>
+<li>type "if" or "try" and then select some sugeested completion snippet..</li>
+<li>emmet works just the same</li>
+<li><code>c-`</code> open terminal</li>
+<li><code>c-,</code> - open settings</li>
+<li><code>C-1, C-2, C-3</code> - different windows</li>
+<li>file-&gt;autosave - autosaves every little change</li>
+<li><code>c-n</code> - create new file</li>
+<li>live server/live preview - html/css editing on the fly</li>
+<li><code>c+shift+g</code> git interface</li>
+<li>run auto detected tasks(google when its useful)</li>
+<li><code>c+k c+s</code> customize shortcuts</li>
+<li>eslint extensions for smth many downloads</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4c1c20b" class="outline-3">
+<h3 id="org4c1c20b"><span class="section-number-3">1.5.</span> vscode plugins</h3>
+</div>
+<div id="outline-container-org5d673d3" class="outline-3">
+<h3 id="org5d673d3"><span class="section-number-3">1.6.</span> VScode github real life examples</h3>
+<div class="outline-text-3" id="text-1-6">
+<p>
+plugin name - IntelliCode API Usage Examples
+</p>
+</div>
+</div>
+<div id="outline-container-org7b0e79a" class="outline-3">
+<h3 id="org7b0e79a"><span class="section-number-3">1.7.</span> <a href="https://desktop.github.com/">https://desktop.github.com/</a></h3>
+</div>
+<div id="outline-container-org88cfd47" class="outline-3">
+<h3 id="org88cfd47"><span class="section-number-3">1.8.</span> why vscode</h3>
+<div class="outline-text-3" id="text-1-8">
+<p>
+ar mane stabdo emacs?
+</p>
+
+<p>
+pycharm is like an 18 wheeler truck and emacs is like your comfortable
+toyota - Guido
+</p>
+
+<p>
+Vscode is great. Its like a home i can go back to when I'm lost. But
+Emacs is an adventure - Guy on youtube
+</p>
+
+<p>
+<a href="https://www.youtube.com/watch?v=G5mtQhWNezQ&amp;ab_channel=LexClips">sita kalba lex su Guido</a>
+</p>
+
+<ul class="org-ul">
+<li>lex (vscode now 20k hours emacs)</li>
+<li>python create Guide Van Rossum (VSCODE now, 30 years emacs)</li>
+<li>George hotz(vscode + vim)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4530711" class="outline-3">
+<h3 id="org4530711"><span class="section-number-3">1.9.</span> Trying out other editors</h3>
+<div class="outline-text-3" id="text-1-9">
+<p>
+I think it really depends on what someone wants out of Emacs. The
+thread the other day on people who use both had a pretty strong choir
+of people who use Org-mode for note taking and VS Code for dev work,
+which makes perfect sense to me; Emacs guaranteed itself a place in my
+workflow with Org-mode.
+</p>
+
+<p>
+I think if you're satisfied with Emacs for now and you can concretely
+point to packages and functionality in Emacs that you would not know
+how to recreate in VS Code out of the gate, I would say there's not a
+ton of reason to switch to VS Code. I'm largely in the same boat, know
+the basics of some front-end web-dev, occasionally play around with CL
+and elisp, all non-professionally.
+</p>
+
+<p>
+Compatibility with a hypothetical future team will be dependent on
+that team, and at the same time many of the guides/tutorials for Emacs
+I've read encourage learning other editors and how they work in case
+you run into an employment situation that won't work with Emacs for
+whatever reason. Seems like good practice.
+</p>
+</div>
+</div>
+<div id="outline-container-orgdd47b36" class="outline-3">
+<h3 id="orgdd47b36"><span class="section-number-3">1.10.</span> Reason</h3>
+<div class="outline-text-3" id="text-1-10">
+<p>
+I think people overvalue this kind of thing. Vscode is going to be
+around for quite a while. If you think it would improve your life, you
+should use it. It might eventually go away in 15 years, but if it
+does, you can spend a weekend switching to something else. That’s
+hardly a reason to use a suboptimal tool until then. Of course, you
+may prefer Emacs, and that’s fine too. Just saying, I think it’s
+unwise to avoid an extremely healthy ecosystem and tool purely on the
+grounds that it might not exist forever.
+</p>
+</div>
+</div>
+<div id="outline-container-org853640d" class="outline-3">
+<h3 id="org853640d"><span class="section-number-3">1.11.</span> Andrei karpathy emacs lex did it convince him</h3>
+</div>
+<div id="outline-container-org0aecee6" class="outline-3">
+<h3 id="org0aecee6"><span class="section-number-3">1.12.</span> automatic formatting with prettier</h3>
+<div class="outline-text-3" id="text-1-12">
+<p>
+<a href="https://youtube.com/shorts/dDtueNAFELo?si=EDK6Ospk9N38QY_L">https://youtube.com/shorts/dDtueNAFELo?si=EDK6Ospk9N38QY_L</a>
+</p>
+</div>
+</div>
+</div>
+<div class="taglist"><a href="https://arvydasg.github.io/org-static-blog/html/tags.html">Tags</a>: <a href="https://arvydasg.github.io/org-static-blog/html/tag-code.html">code</a> </div></div>
+<div id="postamble" class="status"></div>
+</body>
+</html>
