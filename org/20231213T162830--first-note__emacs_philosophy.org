@@ -4,6 +4,6 @@
 #+identifier: 20231213T162830
 #+STARTUP:    overview
 
-Hello this is a first note containing two tags.
+Hello this is a first note containing a tag.
 
 [[file:20231125T190548--crontab__code_linux.org][file-crontab]]

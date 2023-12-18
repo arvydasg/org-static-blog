@@ -4,12 +4,12 @@
 <title><![CDATA[arvydasg.github.io]]></title>
 <description><![CDATA[arvydasg.github.io]]></description>
 <link>https://arvydasg.github.io/org-static-blog/html</link>
-<lastBuildDate>Fri, 15 Dec 2023 15:13:46 +0000</lastBuildDate>
+<lastBuildDate>Mon, 18 Dec 2023 06:08:49 +0000</lastBuildDate>
 <item>
   <title><![CDATA[first note]]></title>
   <description><![CDATA[
 <p>
-Hello this is a first note containing two tags.
+Hello this is a first note containing a tag.
 </p>
 
 <p>
@@ -20,7 +20,7 @@ Hello this is a first note containing two tags.
   <category><![CDATA[philosophy]]></category>
   <link>https://arvydasg.github.io/org-static-blog/html/20231213T162830--first-note__emacs_philosophy.html</link>
   <guid>https://arvydasg.github.io/org-static-blog/html/20231213T162830--first-note__emacs_philosophy.html</guid>
-  <pubDate>Fri, 15 Dec 2023 15:13:46 +0000</pubDate>
+  <pubDate>Mon, 18 Dec 2023 06:08:49 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[crontab]]></title>
@@ -35,7 +35,7 @@ Hello this is a first note containing two tags.
   <category><![CDATA[linux]]></category>
   <link>https://arvydasg.github.io/org-static-blog/html/20231125T190548--crontab__code_linux.html</link>
   <guid>https://arvydasg.github.io/org-static-blog/html/20231125T190548--crontab__code_linux.html</guid>
-  <pubDate>Fri, 15 Dec 2023 15:13:46 +0000</pubDate>
+  <pubDate>Mon, 18 Dec 2023 06:08:49 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[angular installation]]></title>
@@ -44,14 +44,13 @@ Hello this is a first note containing two tags.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgc69a430">1. Installation of Angular</a></li>
-<li><a href="#orga9ecb4c">2. start ng serve</a></li>
+<li><a href="#org8ea4a89">1. Installation of Angular</a></li>
 </ul>
 </div>
 </nav>
 
-<div id="outline-container-orgc69a430" class="outline-2">
-<h2 id="orgc69a430"><span class="section-number-2">1.</span> Installation of Angular</h2>
+<div id="outline-container-org8ea4a89" class="outline-2">
+<h2 id="org8ea4a89"><span class="section-number-2">1.</span> Installation of Angular</h2>
 <div class="outline-text-2" id="text-1">
 <ul class="org-ul">
 <li>Make sure you have nvm installed. To install -</li>
@@ -63,93 +62,6 @@ source ~/.bashrc
 nvm -v.
 </pre>
 </div>
-
-<p>
-Over it install node latest version by:
-</p>
-
-<div class="org-src-container">
-<pre class="src src-bash">nvm install --lts
-nvm use --lts
-node -v
-</pre>
-</div>
-
-<p>
-make sure npm is installed by
-</p>
-
-<div class="org-src-container">
-<pre class="src src-bash">npm -v
-</pre>
-</div>
-
-<p>
-install angular by:
-</p>
-
-<div class="org-src-container">
-<pre class="src src-bash">npm install -g @angular/cli
-ng version
-</pre>
-</div>
-
-<p>
-install project dependencies by:
-</p>
-
-<div class="org-src-container">
-<pre class="src src-bash">npm install
-</pre>
-</div>
-
-<p>
-Start angular service while in crud folder with ng serve command (or
-NODE<sub>OPTIONS</sub>="&#x2013;max<sub>old</sub><sub>space</sub><sub>size</sub>=512" ng serve) if you are low on
-system resources. go to <a href="http://localhost:4200/">http://localhost:4200/</a> and you should see a
-list of movies.
-</p>
-
-<p>
-typescript version - <code>tsc -v</code>
-</p>
-
-<ul class="org-ul">
-<li>Development server</li>
-</ul>
-
-<p>
-Run <code>ng serve</code> for a dev server. Navigate to `<a href="http://localhost:4200/">http://localhost:4200/</a>`.
-The application will automatically reload if you change any of the
-source files.
-</p>
-</div>
-</div>
-
-<div id="outline-container-orga9ecb4c" class="outline-2">
-<h2 id="orga9ecb4c"><span class="section-number-2">2.</span> start ng serve</h2>
-<div class="outline-text-2" id="text-2">
-<p>
-you might close the terminal and open it again and try to use ng
-serve - it might say node is not found, install it.
-</p>
-
-<p>
-well that's because NVM somehow forgot which node it was using.
-</p>
-
-<p>
-so we need to tell NVM once again to use node lt's:
-</p>
-
-<div class="org-src-container">
-<pre class="src src-bash">nvm use --lts
-</pre>
-</div>
-
-<p>
-after this do node -v and npm -v - it should work once again.
-</p>
 </div>
 </div>
 <div class="taglist"><a href="https://arvydasg.github.io/org-static-blog/html/tags.html">Tags</a>: <a href="https://arvydasg.github.io/org-static-blog/html/tag-angular.html">angular</a> <a href="https://arvydasg.github.io/org-static-blog/html/tag-code.html">code</a> </div>]]></description>
@@ -157,7 +69,7 @@ after this do node -v and npm -v - it should work once again.
   <category><![CDATA[code]]></category>
   <link>https://arvydasg.github.io/org-static-blog/html/20231125T184606--angular-installation__angular_code.html</link>
   <guid>https://arvydasg.github.io/org-static-blog/html/20231125T184606--angular-installation__angular_code.html</guid>
-  <pubDate>Fri, 15 Dec 2023 15:13:46 +0000</pubDate>
+  <pubDate>Mon, 18 Dec 2023 06:08:49 +0000</pubDate>
 </item>
 </channel>
 </rss>
