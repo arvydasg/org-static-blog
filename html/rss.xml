@@ -4,23 +4,30 @@
 <title><![CDATA[arvydasg.github.io]]></title>
 <description><![CDATA[arvydasg.github.io]]></description>
 <link>https://arvydasg.github.io/org-static-blog/html</link>
-<lastBuildDate>Mon, 18 Dec 2023 06:08:49 +0000</lastBuildDate>
+<lastBuildDate>Mon, 18 Dec 2023 06:23:10 +0000</lastBuildDate>
 <item>
-  <title><![CDATA[first note]]></title>
+  <title><![CDATA[windows keybindings]]></title>
   <description><![CDATA[
 <p>
-Hello this is a first note containing a tag.
+Lots of shortcuts already in my head, but some that are new are:
 </p>
 
+<ul class="org-ul">
+<li>win + ctrl + t - always on top window</li>
+<li>alt + space - look for programs</li>
+<li>win + shift + / - ALL SHORTCUTS</li>
+<li>win+shift+T - TEXT EXTRACTOR WTF??!!</li>
+</ul>
+
 <p>
-<a href="20231125T190548--crontab__code_linux.html">file-crontab</a>
+Install <code>powertoys</code> app in windows for rebinding various keys, especially caps
+-&gt; ctrl
 </p>
-<div class="taglist"><a href="https://arvydasg.github.io/org-static-blog/html/tags.html">Tags</a>: <a href="https://arvydasg.github.io/org-static-blog/html/tag-emacs.html">emacs</a> <a href="https://arvydasg.github.io/org-static-blog/html/tag-philosophy.html">philosophy</a> </div>]]></description>
-  <category><![CDATA[emacs]]></category>
-  <category><![CDATA[philosophy]]></category>
-  <link>https://arvydasg.github.io/org-static-blog/html/20231213T162830--first-note__emacs_philosophy.html</link>
-  <guid>https://arvydasg.github.io/org-static-blog/html/20231213T162830--first-note__emacs_philosophy.html</guid>
-  <pubDate>Mon, 18 Dec 2023 06:08:49 +0000</pubDate>
+<div class="taglist"><a href="https://arvydasg.github.io/org-static-blog/html/tags.html">Tags</a>: <a href="https://arvydasg.github.io/org-static-blog/html/tag-windows.html">windows</a> </div>]]></description>
+  <category><![CDATA[windows]]></category>
+  <link>https://arvydasg.github.io/org-static-blog/html/windows-keybindings__windows.html</link>
+  <guid>https://arvydasg.github.io/org-static-blog/html/windows-keybindings__windows.html</guid>
+  <pubDate>Mon, 18 Dec 2023 06:23:10 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[crontab]]></title>
@@ -33,43 +40,67 @@ Hello this is a first note containing a tag.
 <div class="taglist"><a href="https://arvydasg.github.io/org-static-blog/html/tags.html">Tags</a>: <a href="https://arvydasg.github.io/org-static-blog/html/tag-code.html">code</a> <a href="https://arvydasg.github.io/org-static-blog/html/tag-linux.html">linux</a> </div>]]></description>
   <category><![CDATA[code]]></category>
   <category><![CDATA[linux]]></category>
-  <link>https://arvydasg.github.io/org-static-blog/html/20231125T190548--crontab__code_linux.html</link>
-  <guid>https://arvydasg.github.io/org-static-blog/html/20231125T190548--crontab__code_linux.html</guid>
-  <pubDate>Mon, 18 Dec 2023 06:08:49 +0000</pubDate>
+  <link>https://arvydasg.github.io/org-static-blog/html/crontab__code_linux.html</link>
+  <guid>https://arvydasg.github.io/org-static-blog/html/crontab__code_linux.html</guid>
+  <pubDate>Mon, 18 Dec 2023 06:23:10 +0000</pubDate>
 </item>
 <item>
-  <title><![CDATA[angular installation]]></title>
+  <title><![CDATA[Alpine]]></title>
   <description><![CDATA[
 <nav id="table-of-contents" role="doc-toc">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org8ea4a89">1. Installation of Angular</a></li>
+<li><a href="#orgbfaaf60">1. Alpine&#xa0;&#xa0;&#xa0;<span class="tag"><span class="tag1">tag1</span></span></a></li>
 </ul>
 </div>
 </nav>
 
-<div id="outline-container-org8ea4a89" class="outline-2">
-<h2 id="org8ea4a89"><span class="section-number-2">1.</span> Installation of Angular</h2>
+<div id="outline-container-orgbfaaf60" class="outline-2">
+<h2 id="orgbfaaf60"><span class="section-number-2">1.</span> Alpine&#xa0;&#xa0;&#xa0;<span class="tag"><span class="tag1">tag1</span></span></h2>
 <div class="outline-text-2" id="text-1">
+<p>
+<code>INSTALLATION GUIDE</code>
+</p>
+
 <ul class="org-ul">
-<li>Make sure you have nvm installed. To install -</li>
+<li><b>bold text</b> install virtual <i>underlined text</i> machine with 1gb and 10gb</li>
+<li>ping google.com for internet connection</li>
+<li>apk add sudo (might not need this, just enable community first)</li>
+<li>timestamp active <span class="timestamp-wrapper"><span class="timestamp">[2023-12-16 Sat]</span></span></li>
+<li>timestamp inactive <span class="timestamp-wrapper"><span class="timestamp">&lt;2023-12-16 Sat&gt;</span></span></li>
+<li>sudo apk add htop</li>
+<li>test<sub>underscore</sub><sub>test</sub></li>
+<li>vi /etc/apk/repositories - enable community one</li>
+<li>apk<sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup> update</li>
+<li>sudo apk add emacs</li>
+<li>entities test &alpha;</li>
 </ul>
 
-<div class="org-src-container">
-<pre class="src src-bash">curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
-source ~/.bashrc
-nvm -v.
-</pre>
+
+<p>
+huh what is this
+</p>
+
+<p>
+:huh what is this 2
+</p>
 </div>
 </div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+this is a footnote dude, how cool is that.
+</p></div></div>
+
+
 </div>
-<div class="taglist"><a href="https://arvydasg.github.io/org-static-blog/html/tags.html">Tags</a>: <a href="https://arvydasg.github.io/org-static-blog/html/tag-angular.html">angular</a> <a href="https://arvydasg.github.io/org-static-blog/html/tag-code.html">code</a> </div>]]></description>
-  <category><![CDATA[angular]]></category>
-  <category><![CDATA[code]]></category>
-  <link>https://arvydasg.github.io/org-static-blog/html/20231125T184606--angular-installation__angular_code.html</link>
-  <guid>https://arvydasg.github.io/org-static-blog/html/20231125T184606--angular-installation__angular_code.html</guid>
-  <pubDate>Mon, 18 Dec 2023 06:08:49 +0000</pubDate>
+</div><div class="taglist"></div>]]></description>
+  <link>https://arvydasg.github.io/org-static-blog/html/alpine.html</link>
+  <guid>https://arvydasg.github.io/org-static-blog/html/alpine.html</guid>
+  <pubDate>Mon, 18 Dec 2023 06:23:10 +0000</pubDate>
 </item>
 </channel>
 </rss>
