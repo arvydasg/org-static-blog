@@ -4,7 +4,7 @@
 <title><![CDATA[arvydasg.github.io]]></title>
 <description><![CDATA[arvydasg.github.io]]></description>
 <link>https://arvydasg.github.io/org-static-blog/html</link>
-<lastBuildDate>Mon, 18 Dec 2023 09:09:55 +0000</lastBuildDate>
+<lastBuildDate>Mon, 18 Dec 2023 09:29:59 +0000</lastBuildDate>
 <item>
   <title><![CDATA[windows keybindings]]></title>
   <description><![CDATA[
@@ -27,14 +27,11 @@ Install <code>powertoys</code> app in windows for rebinding various keys, especi
   <category><![CDATA[windows]]></category>
   <link>https://arvydasg.github.io/org-static-blog/html/windows-keybindings__windows.html</link>
   <guid>https://arvydasg.github.io/org-static-blog/html/windows-keybindings__windows.html</guid>
-  <pubDate>Mon, 18 Dec 2023 09:09:55 +0000</pubDate>
+  <pubDate>Mon, 18 Dec 2023 09:29:59 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[crontab]]></title>
   <description><![CDATA[
-<p>
-HELLO
-</p>
 <ul class="org-ul">
 <li>To view your own user's crontab: <code>crontab -l</code></li>
 <li>To edit your own user's crontab: <code>crontab -e</code></li>
@@ -45,7 +42,7 @@ HELLO
   <category><![CDATA[linux]]></category>
   <link>https://arvydasg.github.io/org-static-blog/html/crontab__code_linux.html</link>
   <guid>https://arvydasg.github.io/org-static-blog/html/crontab__code_linux.html</guid>
-  <pubDate>Mon, 18 Dec 2023 09:09:55 +0000</pubDate>
+  <pubDate>Mon, 18 Dec 2023 09:29:59 +0000</pubDate>
 </item>
 <item>
   <title><![CDATA[Alpine]]></title>
@@ -54,13 +51,13 @@ HELLO
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgab9aa70">1. Alpine&#xa0;&#xa0;&#xa0;<span class="tag"><span class="tag1">tag1</span></span></a></li>
+<li><a href="#org55f6ff2">1. Alpine&#xa0;&#xa0;&#xa0;<span class="tag"><span class="tag1">tag1</span></span></a></li>
 </ul>
 </div>
 </nav>
 
-<div id="outline-container-orgab9aa70" class="outline-2">
-<h2 id="orgab9aa70"><span class="section-number-2">1.</span> Alpine&#xa0;&#xa0;&#xa0;<span class="tag"><span class="tag1">tag1</span></span></h2>
+<div id="outline-container-org55f6ff2" class="outline-2">
+<h2 id="org55f6ff2"><span class="section-number-2">1.</span> Alpine&#xa0;&#xa0;&#xa0;<span class="tag"><span class="tag1">tag1</span></span></h2>
 <div class="outline-text-2" id="text-1">
 <p>
 <code>INSTALLATION GUIDE</code>
@@ -103,7 +100,75 @@ this is a footnote dude, how cool is that.
 </div><div class="taglist"></div>]]></description>
   <link>https://arvydasg.github.io/org-static-blog/html/alpine.html</link>
   <guid>https://arvydasg.github.io/org-static-blog/html/alpine.html</guid>
-  <pubDate>Mon, 18 Dec 2023 09:09:55 +0000</pubDate>
+  <pubDate>Mon, 18 Dec 2023 09:29:59 +0000</pubDate>
+</item>
+<item>
+  <title><![CDATA[create a blog with hugo]]></title>
+  <description><![CDATA[
+<nav id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org578550d">1. commands</a></li>
+</ul>
+</div>
+</nav>
+<p>
+get started video - <a href="https://www.youtube.com/watch?v=LIFvgrRxdt4&amp;ab_channel=RyanSchachte">https://www.youtube.com/watch?v=LIFvgrRxdt4&amp;ab_channel=RyanSchachte</a>
+</p>
+
+<p>
+second video - <a href="https://www.youtube.com/watch?v=hjD9jTi_DQ4&amp;t=2225s&amp;ab_channel=EnvatoTuts%2B">https://www.youtube.com/watch?v=hjD9jTi_DQ4&amp;t=2225s&amp;ab_channel=EnvatoTuts%2B</a>
+</p>
+
+<div id="outline-container-org578550d" class="outline-2">
+<h2 id="org578550d"><span class="section-number-2">1.</span> commands</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>hugo new site nameofthesite</li>
+<li>cd themes git clone theme</li>
+<li>change config.toml to config.yml</li>
+<li>hugo server - works</li>
+<li>hugo new posts/firstpost.md</li>
+<li>git submodule add -b master <a href="https://github.com/arvydasg/arvydasg.github.io.git">https://github.com/arvydasg/arvydasg.github.io.git</a>
+public (public where file will be stored)</li>
+<li>hugo -t hugo-PaperMod</li>
+<li>cd public</li>
+<li>git remote -v (origin is not what you expected ;) its arvydas.github.io</li>
+<li>push public folder and site is live!</li>
+</ul>
+</div>
+</div>
+<div class="taglist"><a href="https://arvydasg.github.io/org-static-blog/html/tags.html">Tags</a>: <a href="https://arvydasg.github.io/org-static-blog/html/tag-hugo.html">hugo</a> <a href="https://arvydasg.github.io/org-static-blog/html/tag-websites.html">websites</a> </div>]]></description>
+  <category><![CDATA[hugo]]></category>
+  <category><![CDATA[websites]]></category>
+  <link>https://arvydasg.github.io/org-static-blog/html/20231128T133020--create-a-blog-with-hugo__hugo_websites.html</link>
+  <guid>https://arvydasg.github.io/org-static-blog/html/20231128T133020--create-a-blog-with-hugo__hugo_websites.html</guid>
+  <pubDate>Mon, 18 Dec 2023 09:29:59 +0000</pubDate>
+</item>
+<item>
+  <title><![CDATA[windows keybindings]]></title>
+  <description><![CDATA[
+<p>
+Lots of shortcuts already in my head, but some that are new are:
+</p>
+
+<ul class="org-ul">
+<li>win + ctrl + t - always on top window</li>
+<li>alt + space - look for programs</li>
+<li>win + shift + / - ALL SHORTCUTS</li>
+<li>win+shift+T - TEXT EXTRACTOR WTF??!!</li>
+</ul>
+
+<p>
+Install <code>powertoys</code> app in windows for rebinding various keys, especially caps
+-&gt; ctrl
+</p>
+<div class="taglist"><a href="https://arvydasg.github.io/org-static-blog/html/tags.html">Tags</a>: <a href="https://arvydasg.github.io/org-static-blog/html/tag-windows.html">windows</a> </div>]]></description>
+  <category><![CDATA[windows]]></category>
+  <link>https://arvydasg.github.io/org-static-blog/html/20231128T132920--windows-keybindings__windows.html</link>
+  <guid>https://arvydasg.github.io/org-static-blog/html/20231128T132920--windows-keybindings__windows.html</guid>
+  <pubDate>Mon, 18 Dec 2023 09:29:59 +0000</pubDate>
 </item>
 </channel>
 </rss>
